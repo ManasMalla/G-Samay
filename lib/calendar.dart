@@ -1,5 +1,8 @@
+import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:table_calendar/table_calendar.dart';
+import 'package:intl/intl.dart';
 
 class CalendarScreen extends StatelessWidget {
   const CalendarScreen({super.key});
@@ -27,6 +30,32 @@ class CalendarScreen extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
+              TableCalendar(
+                focusedDay: DateTime.now(),
+                firstDay: DateTime.now().subtract(Duration(days: 365)),
+                lastDay: DateTime.now().add(Duration(days: 365)),
+                calendarStyle: CalendarStyle(
+                    todayDecoration: BoxDecoration(
+                        color: const Color(0xFF981F2B),
+                        shape: BoxShape.circle)),
+                headerStyle: HeaderStyle(
+                    formatButtonVisible: false,
+                    titleCentered: true,
+                    titleTextStyle: TextStyle(color: const Color(0xFF981F2B)),
+                    leftChevronIcon: Icon(
+                      FeatherIcons.chevronLeft,
+                      color: Colors.black.withOpacity(0.6),
+                    ),
+                    rightChevronIcon: Icon(
+                      FeatherIcons.chevronRight,
+                      color: Colors.black.withOpacity(0.6),
+                    )),
+                daysOfWeekStyle: DaysOfWeekStyle(
+                  dowTextFormatter: (date, locale) {
+                    return DateFormat('EE').format(date).substring(0, 2);
+                  },
+                ),
+              )
             ],
           ),
         ),
