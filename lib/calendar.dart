@@ -1,4 +1,5 @@
 import 'package:feather_icons/feather_icons.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -28,7 +29,7 @@ class CalendarScreen extends StatelessWidget {
                 height: 8,
               ),
               Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac leo eu justo feugiat interdum.",
+                  "Set reminders for specific events, lectures, seminars or tasks and balance out your academic life",
                   style: GoogleFonts.poppins()),
               SizedBox(
                 height: 24,

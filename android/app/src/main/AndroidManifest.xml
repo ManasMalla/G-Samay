@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.manasmalla.g_samay">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="g_samay"
         android:name="${applicationName}"

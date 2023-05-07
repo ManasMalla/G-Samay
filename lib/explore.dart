@@ -21,7 +21,7 @@ class ExplorePage extends StatelessWidget {
               height: 8,
             ),
             Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac leo eu justo feugiat interdum.",
+                "Achieve more with GITAM by planning and balancing out your academic life and your passion",
                 style: GoogleFonts.poppins()),
             SizedBox(
               height: 24,

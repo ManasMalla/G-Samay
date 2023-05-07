@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:g_samay/profile.dart';
 import 'package:g_samay/splash_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,37 +29,34 @@ class Dashboard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ClipOval(
-                            child: SizedBox(
-                              height: 54,
-                              width: 54,
-                              child: Image.network(
-                                  "https://avatars.githubusercontent.com/u/38750492?v=4"),
+                          InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => ProfileScreen()));
+                            },
+                            child: ClipOval(
+                              child: SizedBox(
+                                height: 54,
+                                width: 54,
+                                child: Image.network(
+                                    "https://avatars.githubusercontent.com/u/38750492?v=4"),
+                              ),
                             ),
                           ),
                           const Spacer(),
-                          Transform.rotate(
-                            angle: -pi / 2,
-                            child: const Icon(
-                              FeatherIcons.barChart2,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              FirebaseAuth.instance.signOut();
+                          InkWell(
+                            onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => MyHomePage()));
+                                  builder: (context) => ProfileScreen()));
                             },
-                            icon: Icon(
-                              FeatherIcons.power,
-                              color: Colors.white,
-                              size: 20,
+                            child: Transform.rotate(
+                              angle: -pi / 2,
+                              child: const Icon(
+                                FeatherIcons.barChart2,
+                                color: Colors.white,
+                              ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -70,7 +68,7 @@ class Dashboard extends StatelessWidget {
                             fontSize: 36, color: Colors.white),
                       ),
                       Text(
-                        "${((FirebaseAuth.instance.currentUser?.displayName?.isEmpty ?? true) ? "User" : FirebaseAuth.instance.currentUser?.displayName) ?? "User"}.",
+                        "${((FirebaseAuth.instance.currentUser?.displayName?.isEmpty ?? true) ? "User" : FirebaseAuth.instance.currentUser?.displayName?.split(" ")[0]) ?? "User"}.",
                         style: GoogleFonts.poppins(
                             fontSize: 48,
                             color: Colors.white,
