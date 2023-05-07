@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:fullscreen/fullscreen.dart';
 import 'package:g_samay/firebase_options.dart';
 import 'package:g_samay/splash_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'G-Samay',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(
+          primarySwatch: Colors.red,
+          fontFamily: GoogleFonts.poppins().fontFamily),
       home: const MyHomePage(),
     );
   }

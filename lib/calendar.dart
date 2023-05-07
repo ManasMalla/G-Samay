@@ -12,10 +12,13 @@ class CalendarScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(32.0).copyWith(right: 0),
+          padding: const EdgeInsets.all(32.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 36,
+              ),
               Text(
                 "Calendar",
                 style: GoogleFonts.poppins(
@@ -51,8 +54,16 @@ class CalendarScreen extends StatelessWidget {
                       color: Colors.black.withOpacity(0.6),
                     )),
                 daysOfWeekStyle: DaysOfWeekStyle(
+                  weekdayStyle: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.5)),
+                  weekendStyle: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.5)),
                   dowTextFormatter: (date, locale) {
-                    return DateFormat('EE').format(date).substring(0, 2);
+                    return (date.weekday != 4)
+                        ? DateFormat('EE').format(date)[0]
+                        : DateFormat('EE').format(date).substring(0, 2);
                   },
                 ),
               )
