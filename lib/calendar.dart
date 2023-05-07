@@ -22,7 +22,7 @@ class CalendarScreen extends StatelessWidget {
                 height: 8,
               ),
               Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac leo eu justo feugiat interdum.",
+                  "Set reminders for specific events, lectures, seminars or tasks and balance out your academic life",
                   style: GoogleFonts.poppins()),
               SizedBox(
                 height: 24,
