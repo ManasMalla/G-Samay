@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1006689064972",
+    "project_id": "g-samay",
+    "storage_bucket": "g-samay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006689064972:android:015184634e598a51edb629",
+        "android_client_info": {
+          "package_name": "com.manasmalla.g_samay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006689064972-ueidqu79gou1i68vina900m3i3e93r1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9hAE3O0a1Xhy96y6tRSflHxBeObY5Xy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006689064972-ueidqu79gou1i68vina900m3i3e93r1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
