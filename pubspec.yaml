@@ -39,6 +39,7 @@ dependencies:
   firebase_auth: ^4.5.0
   feather_icons: ^1.2.0
   fullscreen: ^1.0.3
+  awesome_notifications: ^0.7.4+1
 
 dev_dependencies:
   flutter_test:
